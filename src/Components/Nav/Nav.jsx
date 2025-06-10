@@ -5,11 +5,11 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 const Nav = () => {
     return (
         <div>
-            <div className="navbar bg-mainbg shadow-sm">
+            <div className="navbar bg-cardbg shadow-sm">
             <div className="flex-1 items-center">
               <div className="flex items-center">
-                <img src={logo} alt="navlogo" className="w-12" />
-              <a className=" text-neoncl font-mono hover:bg-transparent join text-xl lg:text-2xl"><span className="join-item p-0 font-logo">wishper</span><span className="text-white join-item font-logo p-0">wall</span></a>
+                <img src={logo} alt="navlogo" className="w-12 " />
+              <a className=" text-neoncl font-mono hover:bg-transparent join -ml-2 text-xl lg:text-2xl"><span className="join-item p-0 font-logo">wishper</span><span className="text-white join-item font-logo p-0">wall</span></a>
               </div>
             </div>
             <div className="flex gap-3 items-center">

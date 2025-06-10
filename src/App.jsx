@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 import Nav from "./Components/Nav/Nav";
+import { Outlet } from "react-router";
 
 function App() {
   const [isActive, setActive] = useState("home");
@@ -11,11 +12,14 @@ function App() {
   };
   return (
     <section>
-      <div className="bg-mainbg">
+      <div className="bg-cardbg">
+        <Nav></Nav>
         <div className="w-11/12 mx-auto">
-          <Nav></Nav>
+          
 
-          <div className="dock bg-neutral lg:hidden flex text-neutral-content">
+          <Outlet></Outlet>
+
+          <div className="dock w-full fixed bottom-0 bg-cardbg lg:hidden flex text-neutral-content">
             <button
               onClick={() => activenavHandler("home")}
               className={isActive === "home" ? "dock-active text-neoncl" : ""}
