@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import { FiUser } from "react-icons/fi";
-import { IoIosNotificationsOutline } from "react-icons/io";
-import logo from './images/logo.png'
+
+import Nav from "./Components/Nav/Nav";
 
 function App() {
   const [isActive, setActive] = useState("home");
@@ -14,18 +13,7 @@ function App() {
     <section>
       <div className="bg-mainbg">
         <div className="w-11/12 mx-auto">
-          <div className="navbar bg-mainbg shadow-sm">
-            <div className="flex-1 items-center">
-              <div className="flex items-center">
-                <img src={logo} alt="navlogo" className="w-12" />
-              <a className=" text-neoncl font-mono hover:bg-transparent join text-xl"><span className="join-item p-0 font-logo">wishper</span><span className="text-white join-item font-logo p-0">wall</span></a>
-              </div>
-            </div>
-            <div className="flex gap-3 items-center">
-              <p className="text-3xl text-white"><IoIosNotificationsOutline /></p>
-              <p className="text-3xl text-white"><FiUser /></p>
-            </div>
-          </div>
+          <Nav></Nav>
 
           <div className="dock bg-neutral lg:hidden flex text-neutral-content">
             <button
