@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme{
+    --color-mainbg: #0F0F0F;
+    --color-neoncl: #CCFF00;
+    --color-cardbg: #1C1C1E;
+    --color-textcl: #A1A1AA;
+}
+
+body{
+    background: #0F0F0F;
+}

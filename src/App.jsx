@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { FiUser } from "react-icons/fi";
 
 function App() {
   const [isActive, setActive] = useState("home");
@@ -9,11 +10,11 @@ function App() {
   };
   return (
     <section>
-      <div className="bg-neutral">
+      <div className="bg-mainbg">
         <div className="w-11/12 mx-auto">
-          <div className="navbar bg-neutral shadow-sm">
+          <div className="navbar bg-mainbg shadow-sm">
             <div className="flex-1">
-              <a className="btn btn-ghost text-amber-50 text-xl">WishperWall</a>
+              <a className="btn btn-ghost text-neoncl hover:bg-transparent text-xl">WishperWall</a>
             </div>
             <div className="flex gap-2">
               <input
@@ -34,23 +35,7 @@ function App() {
                     />
                   </div>
                 </div>
-                <ul
-                  tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-neutral text-amber-50 rounded-box z-1 mt-3 w-52 p-2 shadow"
-                >
-                  <li>
-                    <a className="justify-between">
-                      Profile
-                      {/* <span className="badge">New</span> */}
-                    </a>
-                  </li>
-                  <li>
-                    <a>Settings</a>
-                  </li>
-                  <li>
-                    <a>Logout</a>
-                  </li>
-                </ul>
+                <p><FiUser /></p>
               </div>
             </div>
           </div>
