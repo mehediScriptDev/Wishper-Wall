@@ -19,7 +19,7 @@ function App() {
 
           <Outlet></Outlet>
 
-          <div className="dock w-full fixed bottom-0 bg-cardbg lg:hidden flex text-neutral-content">
+          <div className="dock w-full fixed bottom-0 bg-mainbg lg:hidden flex text-neutral-content">
             <button
               onClick={() => activenavHandler("home")}
               className={isActive === "home" ? "dock-active text-neoncl" : ""}

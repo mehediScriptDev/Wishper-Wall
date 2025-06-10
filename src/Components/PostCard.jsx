@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHeart, FaComment, FaShare } from 'react-icons/fa';
+import { FaHeart, FaComment, FaShare, FaSadCry } from 'react-icons/fa';
 
 const data = {
   user: {
@@ -23,10 +23,10 @@ const data = {
 
 const PostCard = () => {
   return (
-    <div className="bg-black text-gray-200 rounded-2xl p-4 w-full max-w-md mx-auto mb-6">
+    <div className="bg-black text-gray-200 mt-7 rounded-2xl p-4 w-full max-w-md mx-auto mb-10">
       {/* User Info */}
       <div className="flex items-center mb-3">
-        <img src={data.user.profilePic} alt="profile" className="w-10 h-10 rounded-full mr-3" />
+        <img src={data.user.profilePic} alt="profile" className="w-10 h-10 rounded-lg border-neoncl border-2 mr-3" />
         <div>
           <h3 className="text-white font-semibold">{data.user.name}</h3>
           <p className="text-gray-400 text-xs">{data.user.timeAgo}</p>
@@ -51,21 +51,26 @@ const PostCard = () => {
       </div>
 
       {/* Interactions */}
-      <div className="flex justify-between items-center border-t border-gray-700 pt-2 text-sm">
+      <div className="flex justify-between items-center border-b-[1px] py-3 border-neoncl pt-2 text-sm">
         <div className="flex items-center gap-2">
-          <FaHeart className="text-green-400" />
+          <FaHeart className="text-neoncl" />
           <span>{data.interactions.likes} likes</span>
         </div>
+         
+         <div className="flex items-center gap-2">
+          <FaSadCry className="text-neoncl" />
+          <span>{data.interactions.likes} sad</span>
+        </div>
         <div className="flex items-center gap-2">
-          <FaComment className="text-green-400" />
+          <FaComment className="text-neoncl" />
           <span>{data.interactions.comments} comments</span>
         </div>
-        <FaShare className="text-green-400" />
+       
       </div>
 
       {/* Likes Preview */}
       <div className="flex mt-2 items-center gap-2">
-        <div className="flex -space-x-2">
+        <div className="flex -space-x-2 ">
           {data.interactions.likedBy.map((name, idx) => (
             <img
               key={idx}
@@ -76,7 +81,7 @@ const PostCard = () => {
           ))}
         </div>
         <p className="text-xs text-gray-400">{data.interactions.likedBy[0]} & {data.interactions.likes - 1} others</p>
-        <a href="#" className="ml-auto text-xs text-green-400">See All Comments</a>
+        <a href="#" className="ml-auto text-xs text-textcl underline">See All Comments</a>
       </div>
     </div>
   );
