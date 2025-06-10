@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -6,6 +8,7 @@
     --color-neoncl: #CCFF00;
     --color-cardbg: #1C1C1E;
     --color-textcl: #A1A1AA;
+    --font-logo: 'Viga','mono';
 }
 
 body{
