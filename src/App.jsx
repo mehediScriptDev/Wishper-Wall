@@ -19,7 +19,7 @@ function App() {
 
           <Outlet></Outlet>
 
-          <div className="dock w-full fixed bottom-0 bg-mainbg lg:hidden flex text-neutral-content">
+          <div className="dock w-full fixed bottom-0  bg-mainbg lg:hidden flex justify-between text-neutral-content">
             <button
               onClick={() => activenavHandler("home")}
               className={isActive === "home" ? "dock-active text-neoncl" : ""}
@@ -67,7 +67,7 @@ function App() {
 
             <button
               onClick={() => activenavHandler("inbox")}
-              className={isActive === "inbox" ? "dock-active" : ""}
+              className={isActive === "inbox" ? "dock-active" : "text-3xl absolute bottom-2"}
             >
               <svg
                 className="size-[1.2em]"
