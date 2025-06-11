@@ -1,8 +1,13 @@
 import pp from "../images/download.jpeg";
 import { FaCirclePlus } from "react-icons/fa6";
 import PostCard from "./PostCard";
+import React from "react";
+import {Tabs, Tab, Card, CardBody} from "@heroui/react";
+
+
 
 const Home = () => {
+   const [selected, setSelected] = React.useState("you");
   return (
     //    <div className='py-4 w-11/12 mx-auto overflow-x-auto flex gap-4 scrollbar-hide'> {/* 1️⃣ Add overflow-x-auto for horizontal scroll */}
     // <div className='flex-shrink-0 flex flex-col justify-center items-center'>
@@ -38,38 +43,29 @@ const Home = () => {
         )}
       </div>
       {/* name of each tab group should be unique */}
-      <div className="tabs tabs-border">
-        <input
-          type="radio"
-          name="my_tabs_2"
-          className="tab text-white"
-          aria-label="Tab 1"
-        />
-        <div className="tab-content border-base-300  bg-base-100 p-10">
-          Tab content 1
-        </div>
-
-        <input
-          type="radio"
-          name="my_tabs_2"
-          className="tab text-white"
-          aria-label="Tab 2"
-          defaultChecked
-        />
-        <div className="tab-content border-base-300 bg-base-100 p-10">
-          Tab content 2
-        </div>
-
-        <input
-          type="radio"
-          name="my_tabs_2"
-          className="tab"
-          aria-label="Tab 3"
-        />
-        <div className="tab-content border-base-300 bg-base-100 p-10">
-          Tab content 3
-        </div>
-      </div>
+    {/* name of each tab group should be unique */}
+<div className="flex w-full flex-col">
+      <Tabs aria-label="Options" selectedKey={selected} onSelectionChange={setSelected}>
+        <Tab key="you" className={selected==='you'? 'border-b-2 first-line:border-b-2 border-gray-300 text-gray-300':'text-gray-300'} title="For you">
+          <Card >
+            <CardBody className="border-transparent">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </CardBody>
+          </Card>
+        </Tab>
+        <Tab key="vote" className={selected==='vote'? 'border-b-2 first-line:border-b-2 border-gray-300 text-gray-300':'text-gray-300'} title="Vote">
+          <Card >
+            <CardBody>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur.
+            </CardBody>
+          </Card>
+        </Tab>
+      </Tabs>
+    </div>
       <div className="pb-10">
         <PostCard></PostCard>
       </div>
