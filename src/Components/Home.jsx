@@ -52,7 +52,7 @@ const Home = () => {
             key="you"
             className={
               selected === "you"
-                ? "border-b-2 first-line:border-b-2 border-gray-300 font-semibold text-gray-300"
+                ? "border-b-2 first-line:border-b-2 border-neoncl font-semibold text-gray-300"
                 : "text-gray-400"
             }
             title="For you"
@@ -69,7 +69,7 @@ const Home = () => {
             key="vote"
             className={
               selected === "vote"
-                ? "border-b-2 first-line:border-b-2 font-semibold border-gray-300 text-gray-300"
+                ? "border-b-2 first-line:border-b-2 font-semibold border-neoncl text-gray-300"
                 : "text-gray-400"
             }
             title="Vote"

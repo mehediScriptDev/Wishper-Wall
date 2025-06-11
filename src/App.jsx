@@ -67,7 +67,7 @@ function App() {
 
             <button
               onClick={() => activenavHandler("inbox")}
-              className={isActive === "inbox" ? "dock-active" : "text-3xl absolute bottom-2"}
+              className={isActive === "inbox" ? "dock-active" : ""}
             >
               <svg
                 className="size-[1.2em]"
