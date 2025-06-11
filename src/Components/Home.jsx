@@ -1,8 +1,10 @@
 import pp from "../images/download.jpeg";
 import { FaCirclePlus } from "react-icons/fa6";
 import PostCard from "./PostCard";
+
 import React from "react";
 import { Tabs, Tab, Card, CardBody } from "@heroui/react";
+import Vote from "./Vote";
 
 const Home = () => {
   const [selected, setSelected] = React.useState("you");
@@ -11,6 +13,7 @@ const Home = () => {
     // <div className='flex-shrink-0 flex flex-col justify-center items-center'>
     <section>
       <div className="py-4  flex gap-4 overflow-x-auto scrollbar-hide w-full">
+      
         <div className=" flex justify-center flex-shrink-0 items-center flex-col">
           <div className="relative ">
             <img
@@ -31,7 +34,7 @@ const Home = () => {
               className="flex-shrink-0 flex flex-col justify-center items-center"
             >
               <img
-                className="w-15 h-16 object-cover border-2 border-neoncl rounded-xl"
+                className="w-16 h-16 object-cover border-2 border-neoncl rounded-xl"
                 src={pp}
                 alt={name}
               />
@@ -77,16 +80,14 @@ const Home = () => {
             <Card>
               <CardBody>
                 <div>
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur.
+                  <Vote/>
                 </div>
               </CardBody>
             </Card>
           </Tab>
         </Tabs>
       </div>
+      
     </section>
   );
 };
