@@ -1,15 +1,12 @@
-import { useState } from "react";
+
 import "./App.css";
+import { FaCirclePlus } from "react-icons/fa6";
 
 import Nav from "./Components/Nav/Nav";
 import { Outlet } from "react-router";
 
 function App() {
-  const [isActive, setActive] = useState("home");
-
-  const activenavHandler = (tab) => {
-    setActive(tab);
-  };
+  
   return (
     <section>
       <div className="bg-cardbg">
@@ -21,8 +18,8 @@ function App() {
 
           <div className="dock w-full fixed bottom-0  bg-mainbg lg:hidden flex justify-between text-neutral-content">
             <button
-              onClick={() => activenavHandler("home")}
-              className={isActive === "home" ? "dock-active text-neoncl" : ""}
+             
+              className=""
             >
               <svg
                 className="size-[1.2em]"
@@ -66,47 +63,19 @@ function App() {
             </button>
 
             <button
-              onClick={() => activenavHandler("inbox")}
-              className={isActive === "inbox" ? "dock-active" : ""}
+             
+              className="text-5xl transform text-neoncl -translate-y-2/6"
             >
-              <svg
-                className="size-[1.2em]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="currentColor"
-                  strokeLinejoin="miter"
-                  strokeLinecap="butt"
-                >
-                  <polyline
-                    points="3 14 9 14 9 17 15 17 15 14 21 14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-miterlimit="10"
-                    strokeWidth="2"
-                  ></polyline>
-                  <rect
-                    x="3"
-                    y="3"
-                    width="18"
-                    height="18"
-                    rx="2"
-                    ry="2"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="square"
-                    stroke-miterlimit="10"
-                    strokeWidth="2"
-                  ></rect>
-                </g>
-              </svg>
-              <span className="dock-label">Inbox</span>
+              
+              <p className=" bg-black border-mainbg border-4 rounded-full">
+                            <FaCirclePlus />
+                          </p>
+              <span className="dock-label">Post</span>
             </button>
 
             <button
-              onClick={() => activenavHandler("settings")}
-              className={isActive === "settings" ? "dock-active" : ""}
+             
+              className=""
             >
               <svg
                 className="size-[1.2em]"
