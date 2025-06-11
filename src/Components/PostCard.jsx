@@ -23,7 +23,7 @@ const data = {
 
 const PostCard = () => {
   return (
-    <div className="bg-black text-gray-200 mt-7 rounded-2xl p-4 w-full max-w-md mx-auto mb-10">
+    <div className="bg-black text-gray-200 mt-3 rounded-2xl p-4 w-full max-w-md mx-auto mb-10">
       {/* User Info */}
       <div className="flex items-center mb-3">
         <img src={data.user.profilePic} alt="profile" className="w-10 h-10 rounded-lg border-neoncl border-2 mr-3" />

@@ -46,29 +46,29 @@ const Home = () => {
     {/* name of each tab group should be unique */}
 <div className="flex w-full flex-col">
       <Tabs aria-label="Options" selectedKey={selected} onSelectionChange={setSelected}>
-        <Tab key="you" className={selected==='you'? 'border-b-2 first-line:border-b-2 border-gray-300 text-gray-300':'text-gray-300'} title="For you">
+        <Tab key="you" className={selected==='you'? 'border-b-2 first-line:border-b-2 border-gray-300 font-semibold text-gray-300':'text-gray-400'} title="For you">
           <Card >
             <CardBody className="border-transparent">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <div className="pb-10">
+        <PostCard></PostCard>
+      </div>
             </CardBody>
           </Card>
         </Tab>
-        <Tab key="vote" className={selected==='vote'? 'border-b-2 first-line:border-b-2 border-gray-300 text-gray-300':'text-gray-300'} title="Vote">
+        <Tab key="vote" className={selected==='vote'? 'border-b-2 first-line:border-b-2 font-semibold border-gray-300 text-gray-300':'text-gray-400'} title="Vote">
           <Card >
             <CardBody>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              <div>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur.
+              </div>
             </CardBody>
           </Card>
         </Tab>
       </Tabs>
     </div>
-      <div className="pb-10">
-        <PostCard></PostCard>
-      </div>
+      
     </section>
   );
 };
