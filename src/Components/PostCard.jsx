@@ -1,10 +1,10 @@
-import React from 'react';
+import profilepice from '../images/profilepic.png'
 import { FaHeart, FaComment, FaShare, FaSadCry } from 'react-icons/fa';
 
 const data = {
   user: {
     name: "Ashley Simons",
-    profilePic: "https://randomuser.me/api/portraits/women/1.jpg",
+    profilePic: "https://www.gizbot.com/img/2017/01/browsinginincognitomodedoesntmakeyouanonymousanymorelead-20-1484906264.jpg",
     timeAgo: "51 mins. ago"
   },
   post: {
@@ -26,7 +26,7 @@ const PostCard = () => {
     <div className="bg-black text-gray-200 mt-3 rounded-2xl p-4 w-full max-w-md mx-auto mb-10">
       {/* User Info */}
       <div className="flex items-center mb-3">
-        <img src={data.user.profilePic} alt="profile" className="w-10 h-10 rounded-lg border-neoncl border-2 mr-3" />
+        <img src={profilepice} alt="profile" className="w-10 h-10 rounded-full object-cover border-neoncl border-2 mr-3" />
         <div>
           <h3 className="text-white font-semibold">{data.user.name}</h3>
           <p className="text-gray-400 text-xs">{data.user.timeAgo}</p>

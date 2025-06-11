@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { FaCirclePlus } from "react-icons/fa6";
 
@@ -6,21 +5,15 @@ import Nav from "./Components/Nav/Nav";
 import { Outlet } from "react-router";
 
 function App() {
-  
   return (
     <section>
       <div className="bg-cardbg">
         <Nav></Nav>
         <div className="w-11/12 mx-auto">
-          
-
           <Outlet></Outlet>
 
           <div className="dock w-full fixed bottom-0  bg-mainbg lg:hidden flex justify-between text-neutral-content">
-            <button
-             
-              className=""
-            >
+            <button className="">
               <svg
                 className="size-[1.2em]"
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,21 +55,13 @@ function App() {
               <span className="dock-label">Home</span>
             </button>
 
-            <button
-             
-              className="text-5xl transform text-neoncl -translate-y-2/6"
-            >
-              
+            <button className="text-5xl transform text-neoncl -translate-y-2/6">
               <p className=" bg-black border-mainbg border-4 rounded-full">
-                            <FaCirclePlus />
-                          </p>
+                <FaCirclePlus />
+              </p>
               <span className="dock-label">Post</span>
             </button>
-
-            <button
-             
-              className=""
-            >
+            <button className="">
               <svg
                 className="size-[1.2em]"
                 xmlns="http://www.w3.org/2000/svg"
