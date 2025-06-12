@@ -3,20 +3,18 @@ import pp from "../images/profilepic.png";
 const Vote = () => {
   return (
     <div className="font-normal mb-10 mt-2 p-2">
-      <div className="flex justify-center gap-1 items-center">
-        <img
+      <div >
+       <div className="flex justify-center gap-1 ">
+         <img
           className="w-10 h-10 object-cover rounded-xl"
           src={pp}
           alt="profilepic"
         />
-        <input
-          type="text"
-          name="wishper"
-          className="w-full px-3 py-1 border-none"
-          id=""
-          placeholder="Start a wishper, the wall listens..."
-          readOnly
-        />
+        <textarea name="wishper" placeholder="Start a wishper, the wall listens..." className="border-2 bg-transparent outline-none rounded-md px-3 py-1 w-full border-gray-500 " id=""></textarea>
+       </div>
+        <div className="flex justify-end">
+          <button className="btn btn-sm mt-1 mr-1 bg-mainbg border-transparent text-textcl shadow-none">Post</button>
+        </div>
       </div>
        <div className="mt-4">
         {/* Dummy post 1 */}
