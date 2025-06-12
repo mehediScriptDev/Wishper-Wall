@@ -1,10 +1,13 @@
 import pp from "../images/profilepic.png";
 
 const Vote = () => {
+  const postsubmitHandler = e =>{
+    e.preventDefault();
+  }
   return (
     <div className="font-normal mb-10 mt-2 p-2">
       <div >
-       <form >
+       <form onSubmit={postsubmitHandler}>
         <div className="flex justify-center gap-1 ">
          <img
           className="w-10 h-10 object-cover rounded-xl"
