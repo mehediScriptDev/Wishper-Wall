@@ -110,7 +110,7 @@ function App() {
       </div>
       {show ? (
         <div className="bg-mainbg min-h-screen z-20 fixed top-0 w-screen">
-          <CreatePost></CreatePost>
+          <CreatePost setShow={setShow}></CreatePost>
         </div>
       ) : (
         ""
