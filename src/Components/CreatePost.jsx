@@ -1,8 +1,13 @@
 import { RxCross2 } from "react-icons/rx";
 import pp from "../images/profilepic.png";
 import { FaLightbulb } from "react-icons/fa6";
+import { useState } from "react";
 
 const CreatePost = ({ setShow }) => {
+    const [suggestion,setSuggestion] = useState('');
+    const submitHander = e =>{
+        e.preventDefault();
+    }
   return (
     <div className="text-gray-300 w-11/12 mx-auto">
       <div className="flex justify-between  py-2 items-center">
@@ -19,7 +24,7 @@ const CreatePost = ({ setShow }) => {
         </button> */}
       </div>
       <div>
-        <form>
+        <form onSubmit={submitHander}>
           <div className="flex flex-col justify-center mt-3 gap-1 ">
             <div className="items-center gap-2 flex">
               <img
@@ -34,19 +39,20 @@ const CreatePost = ({ setShow }) => {
             <textarea
               name="wishper"
               required
+              defaultValue={suggestion}
               placeholder="Start a wishper, the wall listens..."
               className=" bg-transparent  focus:outline-none  transition duration-100 outline-none rounded-md px-3 py-1 w-full border-gray-500 "
               id=""
             ></textarea>
 
-            <p className="mt-1 text-xs flex items-center text-gray-500 italic">
+            <button onClick={()=>setSuggestion('Solitude is power')} className="mt-1 text-xs flex items-center text-gray-500 italic">
               <FaLightbulb className="text-neoncl" />
               Try: “Solitude is power.”
-            </p>
-            <p className="mt-1 text-xs flex items-center text-gray-500 italic">
+            </button>
+            <button onClick={()=>setSuggestion('Privacy is power.')} className="mt-1 text-xs flex items-center text-gray-500 italic">
               <FaLightbulb className="text-neoncl" />
               Try: “Privacy is power.”
-            </p>
+            </button>
           </div>
           <div className="flex justify-end">
             <button
