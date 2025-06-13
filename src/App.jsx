@@ -4,15 +4,20 @@ import { FaCirclePlus } from "react-icons/fa6";
 import Nav from "./Components/Nav/Nav";
 import { Outlet } from "react-router";
 import LeftNav from "./Components/Leftnav";
+import { useState } from "react";
+import CreatePost from "./Components/CreatePost";
 
 function App() {
+  const [show, setShow] = useState(false);
+  const navigationBtn = () => {
+    setShow(!show);
+  };
   return (
-    <section>
-      <div className="bg-cardbg">
+    <section className="relative">
+      <div className="bg-cardbg ">
         <Nav></Nav>
 
         <div className="w-11/12 mx-auto">
-    
           <Outlet></Outlet>
 
           <div className="dock w-full fixed bottom-0  bg-mainbg lg:hidden flex justify-between text-neutral-content">
@@ -58,7 +63,10 @@ function App() {
               <span className="dock-label">Home</span>
             </button>
 
-            <button className="text-5xl transform text-neoncl -translate-y-2/6">
+            <button
+              onClick={navigationBtn}
+              className="text-5xl transform text-neoncl -translate-y-2/6"
+            >
               <p className=" bg-black border-mainbg border-4 rounded-full">
                 <FaCirclePlus />
               </p>
@@ -100,6 +108,13 @@ function App() {
           </div>
         </div>
       </div>
+      {show ? (
+        <div className="bg-mainbg min-h-screen z-20 fixed top-0 w-screen">
+          <CreatePost></CreatePost>
+        </div>
+      ) : (
+        ""
+      )}
     </section>
   );
 }
