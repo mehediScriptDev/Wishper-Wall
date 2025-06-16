@@ -1,5 +1,7 @@
 import { useState } from "react";
 import pp from "../images/profilepic.png";
+import { AiTwotoneLike } from "react-icons/ai";
+import { AiTwotoneDislike } from "react-icons/ai";
 
 const Vote = () => {
 
@@ -41,11 +43,11 @@ const Vote = () => {
             Should remote work become the norm for tech jobs? 🏡💻
           </p>
           <div className="flex gap-2">
-            <button className="bg-green-600/20 text-green-400 px-3 py-1 rounded-full">
-              👍 10
+            <button className="bg-green-600/20 flex items-center text-green-400 px-3 py-1 rounded-full">
+              <AiTwotoneLike /> 10
             </button>
-            <button className="bg-red-600/20 text-red-400 px-3 py-1 rounded-full">
-              👎 4
+            <button className="bg-red-600/20 flex items-center text-red-400 px-3 py-1 rounded-full">
+              <AiTwotoneDislike /> 4
             </button>
           </div>
           <p className="text-xs text-gray-500 mt-1">14 votes total</p>
