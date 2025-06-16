@@ -18,11 +18,11 @@ function App() {
       <div className="bg-cardbg ">
         <Nav></Nav>
 
-        <div className="grid grid-cols-12">
-          <div className="col-span-4">
+        <div className="grid grid-cols-12 gap-3">
+          <div className="col-span-3 ">
             <LeftNav></LeftNav>
           </div>
-          <div className="w-11/12 col-span-4 mx-auto">
+          <div className="w-11/12 mt-20 col-span-6 mx-auto">
             <Outlet></Outlet>
 
             <div className="dock w-full fixed bottom-0  bg-mainbg lg:hidden flex justify-between text-neutral-content">
@@ -112,7 +112,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-3">
           <Rightnav></Rightnav>
           </div>
         </div>

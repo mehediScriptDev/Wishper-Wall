@@ -4,7 +4,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 const Nav = () => {
     return (
-        <div>
+        <div className='fixed top-0 bg-cardbg z-40 w-full backdrop-blur-2xl'>
             <div className="navbar bg-cardbg shadow-sm">
             <div className="flex-1 items-center">
               <div className="flex items-center">
