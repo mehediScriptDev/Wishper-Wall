@@ -10,7 +10,7 @@ const CreatePost = ({ setShow }) => {
     }
   return (
     <div className="text-gray-300 w-11/12 mx-auto">
-      <div className="flex justify-between  py-2 items-center">
+      <div className="flex justify-between mt-9 py-2 items-center">
         <button
           onClick={() => {
             setShow((prev) => !prev);
