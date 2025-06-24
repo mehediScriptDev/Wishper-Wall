@@ -3,7 +3,7 @@ import { FaCirclePlus } from "react-icons/fa6";
 
 import Nav from "./Components/Nav/Nav";
 import { Outlet } from "react-router";
-import LeftNav from "./Components/Leftnav";
+import LeftNav from "../src/Components/LeftNav";
 import { useState } from "react";
 import CreatePost from "./Components/CreatePost";
 import Rightnav from "./Components/Rightnav";
