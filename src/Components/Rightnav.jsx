@@ -3,8 +3,8 @@ import { FaCirclePlus } from "react-icons/fa6";
 
 const Rightnav = () => {
     return (
-        <div className='flex flex-col min-h-screen px-5  items-center overflow-y-auto'>
-            <div className='mt-16'>
+        <div className='flex flex-col min-h-screen px-5 border-l border-gray-500 items-center overflow-y-auto fixed'>
+            <div className='mt-24'>
                 <h1 className='text-gray-400'>All users</h1>
                 <div className="py-4  flex gap-4 overflow-x-auto scrollbar-hide w-full">
                       
