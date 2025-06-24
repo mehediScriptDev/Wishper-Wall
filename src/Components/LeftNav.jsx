@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const LeftNav = () => {
   return (
-    <div className="lg:flex flex-col bg-cardbg border-r fixed top-22 left-0  border-gray-500 shadow-sm p-4">
+    <div className="lg:flex flex-col bg-cardbg border-r fixed  min-h-screen top-22 left-0  border-gray-500 shadow-sm p-4">
       {/* Search */}
       <div className="mb-4">
         <input

@@ -2,12 +2,19 @@ import pp from "../images/download.jpeg";
 import { FaCirclePlus } from "react-icons/fa6";
 import PostCard from "./PostCard";
 
-import React from "react";
+import React, { useState } from "react";
 import { Tabs, Tab, Card, CardBody } from "@heroui/react";
 import Vote from "./Vote";
 
 const Home = () => {
   const [selected, setSelected] = React.useState("you");
+   const [post,setPost] = useState('');
+    const postsubmitHandler = e =>{
+      e.preventDefault();
+      const userpost = e.target.value;
+      setPost(userpost);
+  
+    }
   return (
     //    <div className='py-4 w-11/12 mx-auto overflow-x-auto flex gap-4 scrollbar-hide'> {/* 1️⃣ Add overflow-x-auto for horizontal scroll */}
     // <div className='flex-shrink-0 flex flex-col justify-center items-center'>
@@ -63,6 +70,23 @@ const Home = () => {
             <Card>
               <CardBody className="border-transparent">
                 <div className="pb-10">
+                  <div >
+                         <form onSubmit={postsubmitHandler}>
+                          <div className="flex justify-center gap-1 ">
+                            {post&& <h1 className="text-white">{post}</h1>}
+                           <img
+                            className="w-10 h-10 object-cover rounded-xl"
+                            src={pp}
+                            alt="profilepic"
+                          />
+                          <textarea name="wishper" required placeholder="Start a wishper, the wall listens..." className="border-2 bg-transparent outline-none rounded-md px-3 py-1 w-full border-gray-500 " id=""></textarea>
+                         </div>
+                          <div className="flex justify-end">
+                            
+                            <input type="submit" className="btn btn-sm mt-1 mr-1 bg-mainbg border-transparent text-textcl shadow-none" value="Post" />
+                          </div>
+                         </form>
+                        </div>
                   <PostCard></PostCard>
                 </div>
               </CardBody>
