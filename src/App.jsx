@@ -19,10 +19,10 @@ function App() {
         <Nav></Nav>
 
         <div className="grid grid-cols-12 gap-3">
-          <div className="col-span-3 ">
+          <div className="lg:col-span-3 hidden lg:block">
             <LeftNav></LeftNav>
           </div>
-          <div className="w-11/12 mt-20 col-span-6 mx-auto">
+          <div className="w-11/12 mt-20 col-span-12 lg:col-span-6 mx-auto">
             <Outlet></Outlet>
 
             <div className="dock w-full fixed bottom-0  bg-mainbg lg:hidden flex justify-between text-neutral-content">
@@ -112,7 +112,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="col-span-3">
+          <div className="lg:col-span-3 hidden lg:block">
           <Rightnav></Rightnav>
           </div>
         </div>
