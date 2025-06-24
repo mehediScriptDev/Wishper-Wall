@@ -5,6 +5,7 @@ import PostCard from "./PostCard";
 import React, { useState } from "react";
 import { Tabs, Tab, Card, CardBody } from "@heroui/react";
 import Vote from "./Vote";
+import Lgnav from "./Nav/Lgnav";
 
 const Home = () => {
   const [selected, setSelected] = React.useState("you");
@@ -19,6 +20,9 @@ const Home = () => {
     //    <div className='py-4 w-11/12 mx-auto overflow-x-auto flex gap-4 scrollbar-hide'> {/* 1️⃣ Add overflow-x-auto for horizontal scroll */}
     // <div className='flex-shrink-0 flex flex-col justify-center items-center'>
     <section>
+      <div>
+        <Lgnav></Lgnav>
+      </div>
       <div className="py-4  flex gap-4 overflow-x-auto scrollbar-hide w-full">
       
         <div className=" flex justify-center flex-shrink-0 items-center flex-col">
