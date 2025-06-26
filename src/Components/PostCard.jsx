@@ -9,14 +9,13 @@ const data = {
   },
   post: {
     text: "last week's picnic, at the perfect spot! 🌿🧡",
-    images: 
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDi_fGBlRSJHCTPv-r1MllKYZbMvi9mfnWtQ&s"
+    
     
   },
   interactions: {
     likes: 315,
     comments: 21,
-    likedBy: ["Anna", "Tom", "Lily"]
+   
   }
 };
 
@@ -40,10 +39,7 @@ const PostCard = () => {
      
 
       {/* Images */}
-      <div className=" gap-2 mb-3">
-        <img src={data.post.images} alt="post" className="rounded-lg object-cover w-full h-full" />
-        
-      </div>
+      
 
       {/* Interactions */}
       <div className="flex justify-between items-center border-b-[1px] py-3 border-neoncl pt-2 text-sm">
