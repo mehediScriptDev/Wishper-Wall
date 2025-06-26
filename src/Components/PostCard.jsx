@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { FaHeart, FaComment, FaShare, FaSadCry } from "react-icons/fa";
+
 import PostForShow from "./PostForShow";
 
 

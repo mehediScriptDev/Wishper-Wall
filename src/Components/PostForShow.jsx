@@ -1,4 +1,4 @@
-import React from 'react';
+import { FaHeart, FaComment, FaShare, FaSadCry } from "react-icons/fa";
 import profilepice from "../images/profilepic.png";
 
 const PostForShow = () => {
