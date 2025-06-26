@@ -1,7 +1,7 @@
 import { FaHeart, FaComment, FaShare, FaSadCry } from "react-icons/fa";
 import profilepice from "../images/profilepic.png";
 
-const PostForShow = () => {
+const PostForShow = ({post}) => {
     const data = {
       user: {
         name: "anonymous001",
@@ -10,7 +10,7 @@ const PostForShow = () => {
         timeAgo: "51 mins. ago",
       },
       post: {
-        text: "last week's picnic, at the perfect spot! 🌿🧡",
+        text: `${post.content}`,
       },
       interactions: {
         likes: 315,
