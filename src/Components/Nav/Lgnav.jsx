@@ -7,7 +7,7 @@ import { FaItunesNote } from "react-icons/fa6";
 const Lgnav = () => {
   return (
     <div>
-      <div className="text-gray-400 flex mb-3 justify-between text-5xl">
+      <div className="text-gray-400 hidden  lg:flex mb-3 justify-between text-5xl">
         <IoMdHome className="text-gray-700" />
         <HiUserGroup />
         <IoMdNotifications />
