@@ -9,13 +9,12 @@ import Lgnav from "./Nav/Lgnav";
 
 const Home = () => {
   const [selected, setSelected] = React.useState("you");
-   const [post,setPost] = useState('');
-    const postsubmitHandler = e =>{
-      e.preventDefault();
-      const userpost = e.target.value;
-      setPost(userpost);
-  
-    }
+  const [post, setPost] = useState("");
+  const postsubmitHandler = (e) => {
+    e.preventDefault();
+    const userpost = e.target.value;
+    setPost(userpost);
+  };
   return (
     //    <div className='py-4 w-11/12 mx-auto overflow-x-auto flex gap-4 scrollbar-hide'> {/* 1️⃣ Add overflow-x-auto for horizontal scroll */}
     // <div className='flex-shrink-0 flex flex-col justify-center items-center'>
@@ -24,7 +23,6 @@ const Home = () => {
         <Lgnav></Lgnav>
       </div>
       <div className="py-4  flex gap-4 overflow-x-auto scrollbar-hide w-full">
-      
         <div className=" flex justify-center flex-shrink-0 items-center flex-col">
           <div className="relative ">
             <img
@@ -74,23 +72,32 @@ const Home = () => {
             <Card>
               <CardBody className="border-transparent">
                 <div className="pb-10">
-                  <div >
-                         <form onSubmit={postsubmitHandler}>
-                          <div className="flex justify-center gap-1 ">
-                            {post&& <h1 className="text-white">{post}</h1>}
-                           <img
-                            className="w-10 h-10 object-cover rounded-xl"
-                            src={pp}
-                            alt="profilepic"
-                          />
-                          <textarea name="wishper" required placeholder="Start a wishper, the wall listens..." className="border-2 bg-transparent outline-none rounded-md px-3 py-1 w-full border-gray-500 " id=""></textarea>
-                         </div>
-                          <div className="flex justify-end">
-                            
-                            <input type="submit" className="btn btn-sm mt-1 mr-1 bg-mainbg border-transparent text-textcl shadow-none" value="Post" />
-                          </div>
-                         </form>
-                        </div>
+                  <div className="hidden lg:block">
+                    <form onSubmit={postsubmitHandler}>
+                      <div className="flex justify-center gap-1 ">
+                        {post && <h1 className="text-white">{post}</h1>}
+                        <img
+                          className="w-10 h-10 object-cover rounded-xl"
+                          src={pp}
+                          alt="profilepic"
+                        />
+                        <textarea
+                          name="wishper"
+                          required
+                          placeholder="Start a wishper, the wall listens..."
+                          className="border-2 bg-transparent outline-none rounded-md px-3 py-1 w-full border-gray-500 "
+                          id=""
+                        ></textarea>
+                      </div>
+                      <div className="flex justify-end">
+                        <input
+                          type="submit"
+                          className="btn btn-sm mt-1 mr-1 bg-mainbg border-transparent text-textcl shadow-none"
+                          value="Post"
+                        />
+                      </div>
+                    </form>
+                  </div>
                   <PostCard></PostCard>
                 </div>
               </CardBody>
@@ -108,14 +115,13 @@ const Home = () => {
             <Card>
               <CardBody>
                 <div>
-                  <Vote/>
+                  <Vote />
                 </div>
               </CardBody>
             </Card>
           </Tab>
         </Tabs>
       </div>
-      
     </section>
   );
 };
