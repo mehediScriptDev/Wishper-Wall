@@ -1,7 +1,6 @@
 import pp from "../images/download.jpeg";
 import { FaCirclePlus } from "react-icons/fa6";
 import PostCard from "./PostCard";
-
 import React, { useState } from "react";
 import { Tabs, Tab, Card, CardBody } from "@heroui/react";
 import Vote from "./Vote";
