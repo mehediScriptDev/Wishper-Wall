@@ -6,10 +6,13 @@ const PostForShow = ({ post }) => {
   const [likes, setLikes] = useState(true);
   const [liked, setLiked] = useState(0);
 
+  const likesound = new Audio('/public/sound/likesound.mp3')
+
   const hitlike = () => {
     if (likes) {
       setLikes(false);
       setLiked(liked + 1);
+      likesound.play()
     } else {
       setLikes(true);
       setLiked(liked - 1);
