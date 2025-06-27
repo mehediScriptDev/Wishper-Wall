@@ -1,7 +1,22 @@
 import { FaHeart, FaComment, FaShare, FaSadCry } from "react-icons/fa";
 import profilepice from "../images/profilepic.png";
+import { useState } from "react";
+
 
 const PostForShow = ({post}) => {
+  const [likes,setLikes] = useState(true);
+  const [liked, setLiked] = useState(0);
+
+  const hitlike = () =>{
+    if(likes){
+setLikes(false);
+setLiked(liked +1)
+    }
+    else{
+      setLikes(true);
+      setLiked(liked - 1);
+    }
+  }
     const data = {
       user: {
         name: "anonymous001",
