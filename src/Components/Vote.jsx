@@ -14,7 +14,16 @@ const Vote = () => {
   }
   const [like,setLike] = useState(0);
   const [liked,setLiked] = useState(false);
-  
+  const [dislike,setDislike] = useState(0);
+  const btnaudio = new Audio('/public/sound/likesound.mp3')
+
+  const likebbtn = ()=>{
+    if(!liked){
+      setLike(0+1);
+      setLiked(true);
+      btnaudio.play();
+    }
+  }
   return (
     <div className="font-normal mb-10 mt-2 p-2">
       <div >
