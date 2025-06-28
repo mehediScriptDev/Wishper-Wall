@@ -12,6 +12,9 @@ const Vote = () => {
     setPost(userpost);
 
   }
+  const [like,setLike] = useState(0);
+  const [liked,setLiked] = useState(false);
+  
   return (
     <div className="font-normal mb-10 mt-2 p-2">
       <div >
