@@ -73,25 +73,7 @@ const Vote = () => {
           <p className="text-xs text-gray-500 mt-1">{like + dislike} votes total</p>
         </div>
 
-        {/* Dummy post 2 */}
-        <div className="bg-mainbg p-3 rounded-xl mb-2">
-          <div className="flex gap-2 items-center text-sm text-gray-400 mb-2">
-            <span className="bg-cardbg text-xs px-2 py-1 rounded-full">Anonymous</span>
-            <span>10 mins ago</span>
-          </div>
-          <p className="text-white mb-2">
-            Do you believe in a 4-day work week? 🤔✨
-          </p>
-          <div className="flex gap-2">
-            <button className="bg-green-600/20 text-green-400 px-3 py-1 rounded-full">
-              👍 20
-            </button>
-            <button className="bg-red-600/20 text-red-400 px-3 py-1 rounded-full">
-              👎 5
-            </button>
-          </div>
-          <p className="text-xs text-gray-500 mt-1">25 votes total</p>
-        </div>
+        
       </div>
     </div>
   );
