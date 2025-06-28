@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import pp from "../images/profilepic.png";
 import { AiTwotoneLike } from "react-icons/ai";
 import { AiTwotoneDislike } from "react-icons/ai";
@@ -32,8 +32,14 @@ const Vote = () => {
       btnaudio.play();
     }
   }
+const [votes,setVote] = useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:5000/votes')
+    .then(res=>res.json())
+    .then(data=>setVote(data))
+  },[])
   return (
-    <div className="font-normal mb-10 mt-2 p-2">
+    <div className="font-normal min-h-screen mb-10 mt-2 p-2">
       <div >
        <form onSubmit={postsubmitHandler}>
         <div className="flex justify-center gap-1 ">
