@@ -23,6 +23,14 @@ const Vote = () => {
       setLiked(true);
       btnaudio.play();
     }
+    
+  }
+  const dislikebtn = ()=>{
+    if(!liked){
+      setDislike(0+1);
+      setLiked(true);
+      btnaudio.play();
+    }
   }
   return (
     <div className="font-normal mb-10 mt-2 p-2">
@@ -55,14 +63,14 @@ const Vote = () => {
             Should remote work become the norm for tech jobs? 🏡💻
           </p>
           <div className="flex gap-2">
-            <button className="bg-green-600/20 flex items-center text-green-400 px-3 py-1 rounded-full">
-              <AiTwotoneLike /> 10
+            <button onClick={likebbtn} className="bg-green-600/20 flex items-center text-green-400 px-3 py-1 rounded-full">
+              <AiTwotoneLike /> {like}
             </button>
-            <button className="bg-red-600/20 flex items-center text-red-400 px-3 py-1 rounded-full">
-              <AiTwotoneDislike /> 4
+            <button onClick={dislikebtn} className="bg-red-600/20 flex items-center text-red-400 px-3 py-1 rounded-full">
+              <AiTwotoneDislike /> {dislike}
             </button>
           </div>
-          <p className="text-xs text-gray-500 mt-1">14 votes total</p>
+          <p className="text-xs text-gray-500 mt-1">{like + dislike} votes total</p>
         </div>
 
         {/* Dummy post 2 */}
