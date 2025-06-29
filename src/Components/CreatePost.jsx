@@ -1,5 +1,4 @@
 import { RxCross2 } from "react-icons/rx";
-import Swal from "sweetalert2";
 import pp from "../images/profilepic.png";
 import { FaLightbulb } from "react-icons/fa6";
 import { useState } from "react";
@@ -20,11 +19,7 @@ const CreatePost = ({ setShow }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          Swal.fire({
-            title: "Good job!",
-            text: "You clicked the button!",
-            icon: "success",
-          });
+          document.getElementById('my_modal_2').showModal();
         }
       });
   };
@@ -90,6 +85,21 @@ const CreatePost = ({ setShow }) => {
           </div>
         </form>
       </div>
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+
+<dialog id="my_modal_2" className="modal modal-middle">
+  <div className="modal-box bg-cardbg">
+    
+    <h3 className="font-bold text-4xl text-center text-neoncl">Posted</h3>
+    
+    <div className="modal-action flex items-center justify-center">
+      <form method="dialog ">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn bg-neoncl btn-xs">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     </div>
   );
 };
