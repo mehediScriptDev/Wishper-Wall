@@ -7,6 +7,8 @@ const CreatePost = ({ setShow }) => {
     const [suggestion,setSuggestion] = useState('');
     const submitHander = e =>{
         e.preventDefault();
+        const postinfo = e.target.wishper.value;
+        console.log(postinfo)
     }
   return (
     <div className="text-gray-300 w-11/12 mx-auto">
