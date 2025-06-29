@@ -1,26 +1,33 @@
 import { RxCross2 } from "react-icons/rx";
+import Swal from "sweetalert2";
 import pp from "../images/profilepic.png";
 import { FaLightbulb } from "react-icons/fa6";
 import { useState } from "react";
 
 const CreatePost = ({ setShow }) => {
-    const [suggestion,setSuggestion] = useState('');
-    const submitHander = e =>{
-        e.preventDefault();
-        const postinfo = e.target.wishper.value;
-        
-        fetch('http://localhost:5000/posts',{
-          method:"POST",
-          headers:{
-            'content-type':'application/json'
-          },
-          body:JSON.stringify({content:postinfo})
-        })
-        .then(res=>res.json())
-        .then(data=>{
-          console.log(data)
-        })
-    }
+  const [suggestion, setSuggestion] = useState("");
+  const submitHander = (e) => {
+    e.preventDefault();
+    const postinfo = e.target.wishper.value;
+
+    fetch("http://localhost:5000/posts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ content: postinfo }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Good job!",
+            text: "You clicked the button!",
+            icon: "success",
+          });
+        }
+      });
+  };
   return (
     <div className="text-gray-300 w-11/12 mx-auto">
       <div className="flex justify-between mt-9 py-2 items-center">
@@ -58,11 +65,17 @@ const CreatePost = ({ setShow }) => {
               id=""
             ></textarea>
 
-            <button onClick={()=>setSuggestion('Solitude is power')} className="mt-1 text-xs flex items-center text-gray-500 italic">
+            <button
+              onClick={() => setSuggestion("Solitude is power")}
+              className="mt-1 text-xs flex items-center text-gray-500 italic"
+            >
               <FaLightbulb className="text-neoncl" />
               Try: “Solitude is power.”
             </button>
-            <button onClick={()=>setSuggestion('Privacy is power.')} className="mt-1 text-xs flex items-center text-gray-500 italic">
+            <button
+              onClick={() => setSuggestion("Privacy is power.")}
+              className="mt-1 text-xs flex items-center text-gray-500 italic"
+            >
               <FaLightbulb className="text-neoncl" />
               Try: “Privacy is power.”
             </button>
