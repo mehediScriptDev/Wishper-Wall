@@ -14,7 +14,7 @@ const CreatePost = ({ setShow }) => {
           headers:{
             'content-type':'application/json'
           },
-          body:JSON.stringify(postinfo)
+          body:JSON.stringify({content:postinfo})
         })
         .then(res=>res.json())
         .then(data=>{
