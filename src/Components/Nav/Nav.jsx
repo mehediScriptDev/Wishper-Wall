@@ -26,16 +26,16 @@ const Nav = () => {
       </div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       
-      <dialog id="my_modal_5" className="modal modal-middle">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">Hello!</h3>
+      <dialog id="my_modal_5" className="modal modal-middle *:text-gray-400 bg-cardbg">
+        <div className="modal-box bg-cardbg">
+          <h3 className="font-bold text-2xl font-bold text-neoncl">Coming Soon!</h3>
           <p className="py-4">
-            Press ESC key or click the button below to close
+            We’re building this feature; Thanks for your patience!
           </p>
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn">Close</button>
+              <button className="btn bg-neoncl">Close</button>
             </form>
           </div>
         </div>
