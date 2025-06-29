@@ -21,8 +21,22 @@ const Home = () => {
       <div>
         <Lgnav></Lgnav>
       </div>
+      <dialog id="my_modal_5" className="modal modal-middle *:text-gray-400 bg-cardbg">
+        <div className="modal-box bg-cardbg">
+          <h3 className="text-2xl font-bold text-neoncl">Coming Soon!</h3>
+          <p className="py-4">
+            We’re building this feature; Thanks for your patience!
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn bg-neoncl">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
       <div className="py-4  flex gap-4 overflow-x-auto scrollbar-hide w-full">
-        <div className=" flex justify-center flex-shrink-0 items-center flex-col">
+        <div onClick={()=>{document.getElementById('my_modal_5').showModal()}} className=" flex justify-center flex-shrink-0 items-center flex-col">
           <div className="relative ">
             <img
               className="w-16 h-16 object-cover rounded-xl"

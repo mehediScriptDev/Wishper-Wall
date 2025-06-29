@@ -13,6 +13,7 @@ function App() {
   const navigationBtn = () => {
     setShow(!show);
   };
+  
   return (
     <section className="relative">
       <div className="bg-cardbg ">
@@ -108,13 +109,27 @@ function App() {
                     ></path>
                   </g>
                 </svg>
-                <span className="dock-label">Settings</span>
+                <span onClick={()=>document.getElementById('my_modal_5').showModal()} className="dock-label">Settings</span>
               </button>
             </div>
           </div>
           <div className="lg:col-span-3 hidden lg:block">
           <Rightnav></Rightnav>
           </div>
+          <dialog id="my_modal_5" className="modal modal-middle *:text-gray-400 bg-cardbg">
+        <div className="modal-box bg-cardbg">
+          <h3 className="text-2xl font-bold text-neoncl">Coming Soon!</h3>
+          <p className="py-4">
+            We’re building this feature; Thanks for your patience!
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn bg-neoncl">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
         </div>
       </div>
       {show ? (

@@ -28,7 +28,7 @@ const Nav = () => {
       
       <dialog id="my_modal_5" className="modal modal-middle *:text-gray-400 bg-cardbg">
         <div className="modal-box bg-cardbg">
-          <h3 className="font-bold text-2xl font-bold text-neoncl">Coming Soon!</h3>
+          <h3 className="text-2xl font-bold text-neoncl">Coming Soon!</h3>
           <p className="py-4">
             We’re building this feature; Thanks for your patience!
           </p>
