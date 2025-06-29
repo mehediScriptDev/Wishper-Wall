@@ -8,7 +8,18 @@ const CreatePost = ({ setShow }) => {
     const submitHander = e =>{
         e.preventDefault();
         const postinfo = e.target.wishper.value;
-        console.log(postinfo)
+        
+        fetch('http://localhost:5000/posts',{
+          method:"POST",
+          headers:{
+            'content-type':'application/json'
+          },
+          body:JSON.stringify(postinfo)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          console.log(data)
+        })
     }
   return (
     <div className="text-gray-300 w-11/12 mx-auto">
