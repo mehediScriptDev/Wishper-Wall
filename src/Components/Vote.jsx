@@ -24,8 +24,6 @@ const navigate =useNavigate();
         navigate('/')
       }
     })
-    
-
   }
  
 const [votes,setVote] = useState([]);
