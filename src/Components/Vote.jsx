@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import pp from "../images/profilepic.png";
 
 import VotePost from "./VotePost";
+import { useNavigate } from "react-router";
 
 const Vote = () => {
-
+const navigate =useNavigate();
   
   const postsubmitHandler = e =>{
     e.preventDefault();
@@ -19,7 +20,8 @@ const Vote = () => {
     .then(res=>res.json())
     .then(data=>{
       if(data.insertedId){
-        document.getElementById('222').showModal();
+        document.getElementById('my_modal_222').showModal();
+        navigate('/')
       }
     })
     
