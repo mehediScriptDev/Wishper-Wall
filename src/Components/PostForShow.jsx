@@ -72,11 +72,25 @@ const PostForShow = ({ post }) => {
 
         {/* Likes Preview */}
         <div className="flex mt-2 items-center gap-2">
-          <a href="#" className="ml-auto text-xs text-textcl underline">
+          <a href="#" onClick={()=>document.getElementById('my_modal_22').showModal()} className="ml-auto text-xs text-textcl underline">
             See All Comments
           </a>
         </div>
       </div>
+      <dialog id="my_modal_22" className="modal modal-middle *:text-gray-400 bg-cardbg">
+        <div className="modal-box bg-cardbg">
+          <h3 className="text-2xl font-bold text-neoncl">Coming Soon!</h3>
+          <p className="py-4">
+            We’re building this feature; Thanks for your patience!
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn bg-neoncl">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };
