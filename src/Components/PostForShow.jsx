@@ -30,7 +30,7 @@ const PostForShow = ({ post }) => {
     },
     interactions: {
       likes: `${liked}`,
-      comments: 21,
+      comments: 0,
     },
   };
   return (
