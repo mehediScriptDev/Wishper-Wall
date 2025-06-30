@@ -5,11 +5,24 @@ import VotePost from "./VotePost";
 
 const Vote = () => {
 
-  const [post,setPost] =useState('');
+  
   const postsubmitHandler = e =>{
     e.preventDefault();
-    const userpost = e.target.value;
-    setPost(userpost);
+    const userpost = e.target.wishper.value;
+    fetch('http://localhost:5000/votes',{
+      method:"POST",
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify({content:userpost})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      if(data.insertedId){
+        document.getElementById('222').showModal();
+      }
+    })
+    
 
   }
  
@@ -21,10 +34,23 @@ const [votes,setVote] = useState([]);
   },[])
   return (
     <div className="font-normal min-h-screen mb-10 mt-2 p-2">
+      <dialog id="my_modal_222" className="modal modal-middle">
+  <div className="modal-box bg-cardbg">
+    
+    <h3 className="font-bold text-4xl text-center text-neoncl">Posted</h3>
+    
+    <div className="modal-action flex items-center justify-center">
+      <form method="dialog ">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn bg-neoncl btn-xs">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
       <div >
        <form onSubmit={postsubmitHandler}>
         <div className="flex justify-center gap-1 ">
-          {post&& <h1 className="text-white">{post}</h1>}
+          
          <img
           className="w-10 h-10 object-cover rounded-xl"
           src={pp}
