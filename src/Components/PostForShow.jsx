@@ -59,7 +59,7 @@ const PostForShow = ({ post }) => {
 
         {/* Interactions */}
         <div className="flex justify-between items-center border-b-[1px] py-3 border-neoncl pt-2 text-sm">
-          <div className="flex items-center gap-2" onClick={hitlike}>
+          <div className="flex items-center gap-2 cursor-pointer" onClick={hitlike}>
             <FaHeart className="text-neoncl" />
             <span>{data.interactions.likes} reactions</span>
           </div>
